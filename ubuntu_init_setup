@@ -1,0 +1,14 @@
+#! /bin/bash
+
+MY_SCRIPTS_DIR=/usr/local/chaojie
+
+# programs i use
+apt-get install emacs23 git
+
+# install my scripts
+mkdir -p ${MY_SCRIPTS_DIR}
+chmd 555 scripts/emacs_cleanup
+cp scripts/emacs_cleanup ${MY_SCRIPTS_DIR}
+
+# configuration
+cp ./config_files/.bash_profile./config_files/.gitconfig ~/
